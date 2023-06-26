@@ -1,0 +1,19 @@
+.workexperience-section {
+    margin-top: 50px ;
+}
+
+.tech-skills p{
+    background-color: black;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+}
+.tech-skills p:hover {
+    background-color: blueviolet;
+}
+.date-class {
+    color: black;
+}
+#dark .date-class {
+    color: whitesmoke;
+}

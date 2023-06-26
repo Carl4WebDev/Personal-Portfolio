@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, createContext} from 'react'
+import Sidebar from "./Components/Sidebar/Sidebar.js"
+import About from "./Components/About/About.js" 
+import TechStack from './Components/TechStack/TechStack.js'
+import Project from './Components/Projects/Project.js'
+import WorkExperiece from './Components/WorkExperience/WorkExperiece.js'
+import Education from './Components/Education/Education.js'
+import Testimonial from './Components/Testimonial/Testimonial.js'
+import ScrollToTop from "react-scroll-to-top";
+import "./App.css"
+import NavbarMobileView from './Components/Sidebar/NavbarMobileView.js'
+
+export const ThemeContext = createContext(null)
 
 function App() {
+
+  const [theme, setTheme] = useState('light')
+
+  const changeTheme = () => {
+    setTheme((prev) => (prev === "light" ?  "dark" : "light") )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeContext.Provider value={{theme, changeTheme}}>
+
+      <div id={theme} className={theme}>
+        <NavbarMobileView  changeTheme={changeTheme} theme={theme}/>
+
+        <Sidebar  changeTheme={changeTheme} theme={theme}/>
+        <About />
+        <WorkExperiece />
+        <TechStack /> 
+        <Education />
+        <Project />
+        <Testimonial />
+
+      </div>
+
+      <ScrollToTop 
+        smooth={true}
+        color='whitesmoke' 
+        style={{borderRadius: " 30px", backgroundColor: "black",}}
+      />
+    </ThemeContext.Provider>
+  )
 }
 
-export default App;
+export default App

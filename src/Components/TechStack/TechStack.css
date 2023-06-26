@@ -1,0 +1,93 @@
+
+.techstack-section {
+    margin-top: 40px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.section-title h3 {  
+    text-align: center;
+    font-family: sans-serif,'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.tech-content {
+    padding: 10px;
+    color: black;
+    margin-top: 50px;
+    
+    border-radius: 12px;
+    box-shadow: 15px 9px -2px rgba(230, 224, 224, 0.86);
+    -webkit-box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
+    -moz-box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
+}
+
+#dark .tech-content {
+    color: wheat;
+    background-color: #38004C;
+
+    box-shadow: 15px 9px -2px rgba(0,0,0,0.42);
+    -webkit-box-shadow: 15px 9px 9px -2px rgba(0,0,0,0.42);
+    -moz-box-shadow: 15px 9px 9px -2px rgba(0,0,0,0.42);
+}
+#dark .tech-content:hover {
+    background-color: black;
+}
+.tech-content-marked {
+    background-color: darkblue;
+    color: whitesmoke;
+}
+
+
+.tech-content p {
+    text-align: center; 
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+.tech-content:hover {
+    background-color: rgb(16, 70, 216);
+    color: whitesmoke;
+    cursor: pointer;
+    box-shadow: -10px 10px 10px grey;
+    border: 5px solid yellow;
+    transition-duration: 100ms ;
+}
+.tech-number {
+    border-radius: 12px;
+    height: 50px;
+    width: 50px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+
+.load-more-techstack {
+    background-color: darkblue;
+    width: 150px;
+    padding: 10px;
+    color: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px ;
+    margin-bottom: 35px ;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.load-more-techstack:hover {
+    background-color: rgb(16, 70, 216);
+    border: 5px solid yellow;
+    transition-duration: 100ms;
+}

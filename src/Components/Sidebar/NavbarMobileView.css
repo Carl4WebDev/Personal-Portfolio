@@ -1,0 +1,72 @@
+.mobile-view-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: brown;
+    color: whitesmoke;
+}
+
+.navbar-header p svg {
+    margin-top: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.night-btn {
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.mobile-nav {
+    height: auto;
+    width: 210px;
+    background-color: tomato;
+    padding-bottom: 10px;
+    margin-top: -30px ;
+
+}
+.mobile-nav ul li {
+    color: whitesmoke;
+    list-style-type: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.mobile-nav ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.nav-item-mobileview .active {
+    color: black;
+    background-color: yellowgreen;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+    
+}
+@media (min-width: 1000px) {
+    .mobile-view-navbar {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    
+
+    .mobile-nav {
+        margin-top: -15px ;
+    
+    }
+
+    .mobile-nav ul li {
+        margin-top:15px ;
+        padding: 0;
+    }
+}
