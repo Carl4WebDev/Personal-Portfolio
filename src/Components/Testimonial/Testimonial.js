@@ -5,9 +5,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 import RubberBand from 'react-reveal/RubberBand';
 
 function Testimonial() {
+    
     var settings = {
         dots: true,
         infinite: true,
@@ -15,14 +17,14 @@ function Testimonial() {
         speed: 500,
         autoplaySpeed: 2000,
         cssEase: "linear",
-        slidesToShow: 3,
+        slidesToShow: 1,
         initialSlide: 0,
         responsive: [
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 1,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: true
               }
@@ -30,9 +32,9 @@ function Testimonial() {
             {
               breakpoint: 600,
               settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 1
               }
             },
             {
@@ -54,35 +56,9 @@ function Testimonial() {
     };
     const data = [
         {
-            des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            name: "Manuel Quezon",
-            position: "Fullstack web developer",
-            img: "https://www.sott.net/image/s17/349521/full/maxresdefault.jpg"
-
-        },
-        {
-            des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            name: "Apolinaryo Mabini",
-            position: "Fullstack web developer",
-            img: "https://www.sott.net/image/s17/349521/full/maxresdefault.jpg"
-        },
-        {
-            des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            name: "Jose Rizal",
-            position: "Fullstack web developer",
-            img: "https://www.sott.net/image/s17/349521/full/maxresdefault.jpg"
-        },
-        {
-            des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            name: "Andres Bonifacio",
-            position: "Fullstack web developer",
-            img: "https://www.sott.net/image/s17/349521/full/maxresdefault.jpg"
-        },
-        {
-            des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            name: "Antonio Luna",
-            position: "Fullstack web developer",
-            img: "https://www.sott.net/image/s17/349521/full/maxresdefault.jpg"
+            des: "No testimonials yet",
+            name: "(Name here)",
+            img: "https://th.bing.com/th/id/OIP.JhXLZITkntWrDCk5mH6KzgAAAA?w=176&h=180&c=7&r=0&o=5&pid=1.7"
         },
     ]
 

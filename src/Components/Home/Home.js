@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect';
 import { BsMoonFill,BsFillSunFill, BsGithub, BsFacebook} from "react-icons/bs";
 import { MdAttachEmail } from "react-icons/md";
 import { IoIosContact } from "react-icons/io";
+import Clicked from "../../audio/click.mp3"
 
 
 
@@ -13,15 +14,18 @@ import Slide from 'react-reveal/Slide';
 import {Link} from "react-scroll"
 
 function Home({theme, changeTheme}) {
+    const playSound = () =>{
+        var audio = new Audio(Clicked).play()
+      } 
   return (
     <div className="container-fluid home" id="home">
-      <div className="theme-change" onClick={changeTheme}>
+      <div className="theme-change" onClick={changeTheme} >
         {theme === "light" ? (
-          <p className="moon-theme-icon">
+          <p className="moon-theme-icon" onClick={playSound}>
             <BsMoonFill size={30} />
           </p>
         ) : (
-          <p className="sun-theme-icon">
+          <p className="sun-theme-icon" onClick={playSound}>
             <BsFillSunFill size={30} />
           </p>
         )}
@@ -36,7 +40,7 @@ function Home({theme, changeTheme}) {
                 <h2>
                   <Typewriter
                     options={{
-                      strings: ["Fullstack Web Dev", "MERN stack"],
+                      strings: ["Front-end web developer", "Backend development(beginner level)"],
                       autoStart: true,
                       loop: true,
                       delay: "natural",
@@ -53,7 +57,7 @@ function Home({theme, changeTheme}) {
               <Slide right>
                   
                   <div className="button-for-action">
-                    <div className="hire-me-button">
+                    {/* <div className="hire-me-button">
                     <Link to='contact'
                       spy={true} 
                       smooth={true} 
@@ -63,10 +67,10 @@ function Home({theme, changeTheme}) {
 
                       Hire me
                     </Link>
-                    </div>
+                    </div> */}
 
-                    <div className="get-resume-button">
-                      <a href={myCv} download="Carl_Ivan_Sampan.pdf">
+                    <div className="get-resume-button" onClick={playSound}>
+                      <a target='_' href="https://profile.indeed.com/resume" download="Carl_Ivan_Sampan.pdf">
                         My resume
                       </a>
                     </div>
@@ -83,19 +87,19 @@ function Home({theme, changeTheme}) {
 
                 <h3 className='my-email'>
                     <MdAttachEmail /> 
-                  <a href='https://mail.google.com/mail/u/0/?pli=1#inbox'> 
+                  <a target='_' href='https://mail.google.com/mail/u/0/?pli=1#inbox' onClick={playSound}> 
                       carlforwebdev@gmail.com
                   </a>  
                 </h3>
                 <h3 className='my-github'>
                     <BsGithub />
-                  <a href='https://mail.google.com/mail/u/0/?pli=1#inbox'>
+                  <a target='_' href='https://github.com/Carl4WebDev' onClick={playSound}>
                     https://github.com/Carl4WebDev
                   </a>
                 </h3>
                 <h3 className='my-facebook'>
                     <BsFacebook />
-                  <a href="https://www.youtube.com/watch?v=-Pa5nqYXEnY" >
+                  <a target='_' href="https://www.facebook.com/carlcarlcarlivanivansss" onClick={playSound}>
                     Carl Ivan Sampan
                   </a>
                 </h3>

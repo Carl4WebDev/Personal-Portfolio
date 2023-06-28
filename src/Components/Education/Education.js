@@ -1,24 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./Education.css"
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FcGraduationCap } from 'react-icons/fc';
 
-import Slide from 'react-reveal/Slide';
 
-function Education() {
+function Education({playSound}) {
+  const [show, setShow] = useState(false)
+
+  const handleShow = () => {
+    setShow(!show)
+  }
+
   const data = [
     {
         name: "Udemy",
-        degree: "B.sc in software Engineering",
-        year: "2020-2023",
-        des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        course: "\"The Complete 2023 Web Development Bootcamp \" Created By: Dr. Angela Yu",
+        courselink: "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
+        courseprogress: "50%",
+        year: "2023",
+        des: "This course transformed my understanding of web development. It provided me with the knowledge and skills necessary to create professional and functional websites. The practical projects allowed me to apply the concepts learned and reinforced my understanding of web development principles. The author's teaching style helped me to be self-sufficient and what I loved most about this course is that it teaches you the fundamental concept of programming most specifically in web development that will benefit you in the long-run rather than making you memorize code."
     },
   ]
 
   const colors = [
-    "#27eaef",
+    "darkblue",
   ]
 
   return (
@@ -28,12 +35,12 @@ function Education() {
           <span className='line'></span>
         </div>
 
-        <VerticalTimeline lineColor={'red'}>
+        <VerticalTimeline lineColor={'blue'}>
             {data.map((item, index) => {
                 return (
                     
                     <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
+                        className="vertical-timeline-element--work "
                         contentStyle={{ background: colors[index], color: '#fff' }}
                         contentArrowStyle={{ borderRight: '7px solid '+ colors[index] }}
                         date={item.year}
@@ -42,10 +49,21 @@ function Education() {
                         icon={<FcGraduationCap />}
                     >
                         <h3 className="vertical-timeline-element-title">{item.name}</h3>
-                        <h4 className="vertical-timeline-element-subtitle">{item.degree}</h4>
-                        <p>
-                            {item.des}
-                        </p>
+
+                        <div className="vertical-timeline-element-subtitle">
+                          <h3><a target='_' href='https://www.udemy.com/course/the-complete-web-development-bootcamp/' onClick={playSound}>{item.course}</a></h3>
+                        </div>
+                        <h3>
+
+                          course-progress: {item.courseprogress} 
+                        </h3>
+                        <div className="education-description" onClick={handleShow}>
+                          <p onClick={playSound}>
+                              
+                              {show ? (<p>{item.des} <p style={{color:"lightgreen"}}>Show less</p></p>) : (<p > {item.des.substring(0,50)}...<p style={{color:'lightgreen'}}>See More</p> </p>) }
+                          </p>
+
+                        </div>
                     </VerticalTimelineElement>
                     
                 )

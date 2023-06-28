@@ -1,3 +1,14 @@
 .education-section {
     margin-top: 50px;
 }
+
+.vertical-timeline-element-subtitle a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.vertical-timeline-element-subtitle a:hover{
+    color: yellow;
+}
+.education-description {
+    cursor: pointer;
+}

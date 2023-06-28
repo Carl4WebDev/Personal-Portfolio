@@ -1,153 +1,38 @@
-import React from 'react'
+import React, {useState}  from 'react'
 import "./WorkExperience.css"
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FcHome } from 'react-icons/fc';
+import { BsPersonWorkspace } from 'react-icons/bs';
 
 import Fade from 'react-reveal/Fade';
 
-function WorkExperiece() {
+function WorkExperiece({playSound}) {
+
+    const [show, setShow] = useState(false)
+
+    const handleShow = () => {
+        setShow(!show)
+    }
+
 
     const data = [
         {
-            companyname: "google",
-            position: "full stack dev",
-            des: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            year: "2018-2020",
-            techskills: [
-                {
-                    techname: "Node.js"
-                },
-                {
-                    techname: "react.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-            ]
+            position: "No work experience",
+            des: "Driven by an unwavering passion for web development and an ardent desire to launch my career in this field, I am actively seeking opportunities to showcase my skills and embark on a journey of professional growth. My motivation knows no bounds, and I wholeheartedly embrace any challenge that comes my way, approaching it with unwavering determination to acquire invaluable experience. If given the chance, I am prepared to immerse myself in a vibrant work environment that allows me to apply my knowledge, glean insights from seasoned mentors, and make a valuable contribution to the team's success. I am thrilled to channel my enthusiasm, unwavering dedication, and strong work ethic into a web development role, aiming to leave a profound and lasting impact within the organization.",
+            year: "2023",
         },
-        {
-            companyname: "facebook",
-            position: "full stack dev",
-            des: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            year: "2018-2020",
-            techskills: [
-                {
-                    techname: "Node.js"
-                },
-                {
-                    techname: "react.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-            ]
-        },
-        {
-            companyname: "CIA",
-            position: "full stack dev",
-            des: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            year: "2018-2020",
-            techskills: [
-                {
-                    techname: "Node.js"
-                },
-                {
-                    techname: "react.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-            ]
-        },
-        {
-            companyname: "6X1",
-            position: "full stack dev",
-            des: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            year: "2018-2020",
-            techskills: [
-                {
-                    techname: "Node.js"
-                },
-                {
-                    techname: "react.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-            ]
-        },
-        {
-            companyname: "concentrix",
-            position: "full stack dev",
-            des: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            year: "2018-2020",
-            techskills: [
-                {
-                    techname: "Node.js"
-                },
-                {
-                    techname: "react.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-            ]
-        },
-        {
-            companyname: "Ghouji",
-            position: "full stack dev",
-            des: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            year: "2018-2020",
-            techskills: [
-                {
-                    techname: "Node.js"
-                },
-                {
-                    techname: "react.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-                {
-                    techname: "vue.js"
-                },
-            ]
-        },
+        
     ]
 
     const colors = [
-        "#27eaef",
-        "#0af125",
-        "#8361f8",
-        "#addba0",
-        "#dba0b2",
-        "#daa0f2",
-        "#4ce4be",
-        "#111816",
-        "#47023b",
-        "#ecd181",
-        "#8a836d",
-        "#eea38d",
-        "#731a00",
-        "#b6a0f9",
-        "#FA8072"
+        "#311fc8",
+        "#bb7200",
+        "#3998B6",
+        "darkorange",
+        "#7735F9",
+        "purple",
+        "#0d7f9a"
         
       ]
 
@@ -165,23 +50,23 @@ function WorkExperiece() {
                 return (
                     <VerticalTimelineElement
                             className="vertical-timeline-element--work"
-                            contentStyle={{ background: colors[index], color: '#fff' }}
+                            contentStyle={{ background: "darkblue" , color: 'whitesmoke' }}
                             contentArrowStyle={{ borderRight: '7px solid '+ colors[index] }}
                             date={item.year}
                             dateClassName='date-class' 
                             iconStyle={{ background: colors[index], color: '#fff' }}
-                            icon={<FcHome />}
+                            icon={<BsPersonWorkspace />}
                         >
                         <Fade bottom>
                             <h3 className="vertical-timeline-element-title">{item.position}</h3>
                             <h4 className="vertical-timeline-element-subtitle">{item.companyname}</h4>
                             
-                            <div className='row  '>
+                            {/* <div className='row  '>
                                 {item.techskills.map((tech, index) => {
                                     return (
                                         <div className='col-xl-4 col-lg-4 col-md-4 col-sm-6' key={index}>
-                                            <div className='tech-skills'>
-                                                <p>
+                                            <div className='tech-skills' style={{backgroundColor: colors[index + 1]}}>
+                                                <p >
                                                     {tech.techname}
                                                 </p>
 
@@ -189,10 +74,14 @@ function WorkExperiece() {
                                         </div>  
                                     )
                                 })}
+                            </div> */}
+                            <div className="workexperience-description" onClick={handleShow}>
+                                <p onClick={playSound}>
+                                    
+                                    {show ? (<p>{item.des} <p style={{color:"lightgreen"}}>Show less</p></p>) : (<p > {item.des.substring(0,50)}...<p style={{color:'lightgreen'}}>See More</p> </p>) }
+                                </p>
+
                             </div>
-                            <p>
-                                {item.des}
-                            </p>
                         </Fade>
                     </VerticalTimelineElement>
                 )

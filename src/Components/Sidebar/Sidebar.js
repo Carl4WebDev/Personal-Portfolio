@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect } from 'react'
 import "./Sidebar.css"
 import Home from "../Home/Home.js"
 import { BsChevronDoubleRight, BsChevronDoubleLeft } from "react-icons/bs";
@@ -7,21 +7,23 @@ import { BsChevronDoubleRight, BsChevronDoubleLeft } from "react-icons/bs";
 import "./SidebarList.js"
 import SidebarList from './SidebarList.js';
 
-function SideBar({theme, changeTheme}) {
+function SideBar({theme, changeTheme, playSound}) {
   const[expandSidebar, setExpandSidebar] = useState(false);  
   
   const handleExpandClick = () => {
 
     setExpandSidebar(!expandSidebar)
+    
   } 
+
 
   return (
 
     <div className='container-fluid sidebar-section'>
-        <div className={expandSidebar ? "sidebar-expand sidebar" :  "sidebar"}> 
+        <div className={expandSidebar ? "sidebar-expand sidebar" :  "sidebar"} > 
 
          
-          <div className='icon-expand-collapse' >
+          <div className='icon-expand-collapse' onClick={playSound} >
             <p onClick={handleExpandClick}>
 
               {expandSidebar ? (<BsChevronDoubleLeft size={30}/>) :
@@ -29,7 +31,7 @@ function SideBar({theme, changeTheme}) {
             </p>
           </div>
 
-          <SidebarList  expandSidebar={expandSidebar}/>
+          <SidebarList  expandSidebar={expandSidebar} />
 
         </div>
 

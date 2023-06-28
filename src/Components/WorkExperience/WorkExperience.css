@@ -2,14 +2,17 @@
     margin-top: 50px ;
 }
 
+.tech-skills {
+    border-radius: 12px ;
+}
+
 .tech-skills p{
-    background-color: black;
     border-radius: 12px;
     padding: 10px;
     text-align: center;
 }
 .tech-skills p:hover {
-    background-color: blueviolet;
+    border: 2px yellow solid;
 }
 .date-class {
     color: black;

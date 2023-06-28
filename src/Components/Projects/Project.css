@@ -33,11 +33,13 @@
     display: flex;
     justify-content: space-between;
     margin: 10px;
+    font-weight: bold;
 }
 .tech-used-in-project {
     margin-top: 20px;
     margin: 5px;
 }
+
 .tech-used-in-project p{
     border-radius: 12px; 
     color: whitesmoke;
@@ -45,13 +47,16 @@
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.tech-used-in-project p:hover{
+    border: 2px solid yellow;
+}
 
 .live-demo-button {
     margin-top: 20px;
     margin: 5px;
 }
 .live-demo-button a{
-    background-color: blueviolet;
+    background-color: darkblue;
     padding: 10px;
     color: whitesmoke;
     text-decoration: none;
@@ -61,11 +66,49 @@
     
 }
 .live-demo-button a:hover {
-    background-color: blue;
-    transition-duration: 250ms ;
+    background-color: #001cce;
+    border: 3px solid yellow;
+    transition-duration: 100ms ;
 }
 
+.source-code-button {
+    margin-top: 20px;
+    margin: 5px;
+}
+.source-code-button a{
+    background-color: darkblue;
+    padding: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 12px;
+}
+.source-code-button a:hover {
+    background-color: #001cce;
+    border: 3px solid darkorange;
+    transition-duration: 100ms ;
+}
+.project-buttons {
+    display: flex;
+    justify-content: space-between;
+}
 .description {
     margin: 5px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.future-project {
+    background-color: black;
+    height: 200px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+.future-project-text {
+    text-align: center;
+    color: whitesmoke;
+}
+.display-none {
+    display: none;
 }

@@ -4,7 +4,8 @@ import Slide from 'react-reveal/Slide';
 import Flip from 'react-reveal/Flip';
 
 import Zoom from 'react-reveal/Zoom';
-function TechStack() {
+function TechStack({playSound}) {
+ 
 
   const data = [
     {
@@ -58,9 +59,11 @@ function TechStack() {
 
   const loadMore = () => {
     setShowMoreTechStack((prev) => prev + 3)
+    playSound()
   }
   const loadLess = () => {
     setShowMoreTechStack((prev) => prev - 6)
+    playSound()
   }
 
  

@@ -6,7 +6,8 @@ import { FcNightPortrait,FcHome, FcTodoList, FcContacts,FcFactory,FcSalesPerform
 import {Link} from "react-scroll"
 
 
-function NavbarMobileView({theme, changeTheme}) {
+
+function NavbarMobileView({theme, changeTheme,playSound}) {
   const [open,setOpen] = useState(false)
   const handleClick = () => {
     setOpen(!open)
@@ -15,7 +16,7 @@ function NavbarMobileView({theme, changeTheme}) {
   return (
     <div className="mobile-view-navbar">
       <div className="navbar-header">
-        <p>
+        <p onClick={playSound}>
           <GiHamburgerMenu size={25} onClick={handleClick}/>
         </p>
       </div>
@@ -30,6 +31,7 @@ function NavbarMobileView({theme, changeTheme}) {
               smooth={true}
               duration={100}
               offset={-100}
+              onClick={playSound}
             >
               <FcHome size={25} />
               Home
@@ -43,6 +45,7 @@ function NavbarMobileView({theme, changeTheme}) {
               smooth={true}
               duration={100}
               offset={-100}
+              onClick={playSound}
             >
               <FcNightPortrait size={25} />
               About
@@ -55,6 +58,7 @@ function NavbarMobileView({theme, changeTheme}) {
               smooth={true}
               duration={100}
               offset={-100}
+              onClick={playSound}
             >
               <FcFactory size={25} />
               Work Experience
@@ -67,6 +71,7 @@ function NavbarMobileView({theme, changeTheme}) {
               smooth={true}
               duration={100}
               offset={-100}
+              onClick={playSound}
             >
               <FcSteam size={25} color="orange" />
               Tech stack
@@ -79,6 +84,7 @@ function NavbarMobileView({theme, changeTheme}) {
               smooth={true}
               duration={100}
               offset={-100}
+              onClick={playSound}
             >
               <FcGraduationCap size={25} />
               Education
@@ -91,6 +97,7 @@ function NavbarMobileView({theme, changeTheme}) {
               smooth={true}
               duration={100}
               offset={-100}
+              onClick={playSound}
             >
               <FcSalesPerformance size={25} />
               Project
@@ -103,21 +110,10 @@ function NavbarMobileView({theme, changeTheme}) {
               smooth={true}
               duration={100}
               offset={-100}
+              onClick={playSound}
             >
               <FcTodoList size={25} />
               Testimonial
-            </Link>
-          </li>
-          <li className="nav-item-mobileview">
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              duration={100}
-              offset={-100}
-            >
-              <FcContacts size={25} />
-              Contact
             </Link>
           </li>
 
