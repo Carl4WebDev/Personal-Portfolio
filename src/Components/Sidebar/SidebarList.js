@@ -1,6 +1,6 @@
 import React from 'react'
 import "./SidebarList.css"
-import profilepic from "../../image/profile.jpg"
+import profilepic from "../../image/main-profile.jpg"
 import { FcNightPortrait,FcHome, FcTodoList, FcContacts,FcFactory,FcSalesPerformance, FcGraduationCap,FcSteam, } from "react-icons/fc";
  
 import Clicked from "../../audio/click.mp3"
